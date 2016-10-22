@@ -58,13 +58,13 @@ app.put('/buzzwords', function (req,res) {
     var newPoints = buzzChange.points;
     var heardIt = buzzChange.heard;
 
-  if (heardIt === 'true') {
-    score += Number(buzzChange.points);
-    console.log(score);
-  } else {
-    score = score;
-    console.log(score);
-  }
+  // if (heardIt === 'true') {
+  //   score += Number(buzzChange.points) - lookup[buzzy].points;
+  //   console.log(score);
+  // } else {
+  //   score = score;
+  //   console.log(score);
+  // }
 
 //change buzzword's points and heard boolean
 //lookup loop from stackoverflow
@@ -98,13 +98,13 @@ app.delete('/buzzwords', function(req, res) {
   }
 
 //update score
-  if (buzzChange.heard === 'true') {
-    score = score - Number(buzzChange.points);
-    console.log(score);
-  } else {
-    score = score;
-    console.log(score);
-  }
+  // if (buzzChange.heard === 'true') {
+  //   score = score - Number(buzzChange.points);
+  //   console.log(score);
+  // } else {
+  //   score = score;
+  //   console.log(score);
+  // }
 
 //remove buzzword from collection
   for (i=0; i<collection.length; i++) {
