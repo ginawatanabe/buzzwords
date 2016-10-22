@@ -118,3 +118,15 @@ app.delete('/buzzwords', function(req, res) {
   }
 
 })
+
+app.post('/reset', function(req,res) {
+  score = 0;
+  console.log(score);
+  if (collection.splice(0, collection.length)) {
+    console.log(collection);
+    return res.send({"success": true});
+  } else {
+    return res.send({"success": false});
+  }
+  
+})
